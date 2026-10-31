@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.task-manager {
+  width: 80%;
+  min-height: 650px;
+  margin: 40px auto;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding-bottom: 75px;
+}
+
+.task-header {
+  height: 48px;
+  background-color: #1976d2;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.task-content {
+  padding: 20px 8%;
+}
+
+.empty-state {
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.add-task-button {
+  position: absolute !important;
+  right: 28px;
+  bottom: 12px;
+  min-width: 48px !important;
+  width: 48px;
+  height: 48px;
+  border-radius: 50% !important;
+  font-size: 25px !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25) !important;
+}
+
+@media (max-width: 768px) {
+  .task-manager {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .task-content {
+    padding: 15px 3%;
+    overflow-x: auto;
+  }
+}
