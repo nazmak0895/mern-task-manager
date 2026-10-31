@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Backend is working!" });
+});
+
 const PORT = process.env.PORT || 8082;
 
 const DB_URI =
