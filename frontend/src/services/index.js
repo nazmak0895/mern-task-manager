@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8082/api/tasks";
+const API_URL = "https://mern-task-manager-paji.onrender.com/api/tasks";
 
 export const getTasks = async () => {
   const response = await axios.get(API_URL);
