@@ -73,7 +73,7 @@ const TaskTable = ({
                 {task.linkedFile && (
                   <IconButton
                     component="a"
-                    href={`http://localhost:8082/api/tasks/${task._id}/file`}
+                    href={`https://mern-task-manager-api-rpfo.onrender.com/api/tasks/${task._id}/file`}
                     target="_blank"
                     size="small"
                   >
