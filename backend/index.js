@@ -1,4 +1,10 @@
-require("dotenv").config();
+require("dotenv").config({ path: __dirname + "/.env" });
+
+if (process.env.NODE_ENV !== "production") {
+  const dns = require("dns");
+  dns.setServers(["8.8.8.8", "8.8.4.4"]);
+}
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -19,6 +25,7 @@ const taskRoutes = require("./routes/taskRoutes");
 // Middleware
 app.use(cors());
 app.use(express.json());
+
 
 // Task routes
 app.use("/api/tasks", taskRoutes);
